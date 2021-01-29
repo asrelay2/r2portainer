@@ -47,7 +47,7 @@
             "label": "Minio secret key"
           }
         ],
-        "volumes": ["/data", "/root/.minio"],
+        "volumes": [{"container": "/data"}, {"container": "/root/.minio"}],
         "command": "server /data"
     },
     {
