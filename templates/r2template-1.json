@@ -10,10 +10,8 @@
         "ports": [
           "80/tcp"
         ],
-        "volumes": [{
-            "container": "/usr/local/apache2/htdocs/"
-        }]
-},
+        "volumes": [{"container": "/usr/local/apache2/htdocs/"}]
+    },
     {
         "type": 1,
         "title": "Ghost",
@@ -26,10 +24,7 @@
         "ports": [
           "2368/tcp"
         ],
-        "volumes": [{
-            "container": "/var/lib/ghost/content"
-        }]
-},
+        "volumes": [{"container": "/var/lib/ghost/content"}]},
     {
         "type": 3,
         "title": "Nextcloud",
