@@ -38,11 +38,11 @@
           "Other",
           "Web"
         ],
-        "note": "The database user is nextcloud and the database is nextcloud_db. The host of the database will be located at the bottom of the DB conotainer in portainer.",
+        "note": "The database user is nextcloud and the database is nextcloud_db. The host of the database will be located at the bottom of the DB container in portainer.",
         "platform": "linux",
         "repository": {
           "url": "https://github.com/asrelay2/r2portainer",
-          "stackfile": "template/nextcloud.yml"
+          "stackfile": "templates/nextcloud.yml"
         },
         "env": [
           {
@@ -53,11 +53,12 @@
           {
             "name": "PGID",
             "label": "PGID",
-            "default": "100"
+            "default": "1000"
           },
           {
             "name": "TZ",
-            "label": "TZ"
+            "label": "TZ",
+            "default": "PST"
           },
           {
             "name": "DATABASE_PASSWORD",
