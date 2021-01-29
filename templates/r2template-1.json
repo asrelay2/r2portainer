@@ -1,0 +1,30 @@
+[
+    {
+        "type": "container",
+        "title": "Apache 2 Web Server",
+        "description": "Open-source HTTP server",
+        "categories": ["webserver"],
+        "platform": "linux",
+        "logo": "https://raw.githubusercontent.com/asrelay2/r2portainer/main/assets/httpd.png",
+        "image": "httpd:latest",
+        "ports": [
+          "80/tcp"
+        ],
+        "volumes": ["/usr/local/apache2/htdocs/"]
+    },
+    {
+        "type": "container",
+        "title": "Ghost",
+        "description": "Free and open-source blogging platform",
+        "categories": ["blog"],
+        "note": "Access the blog management interface under <code>/ghost/</code>.",
+        "platform": "linux",
+        "logo": "https://raw.githubusercontent.com/asrelay2/r2portainer/main/assets/ghost.png",
+        "image": "ghost:latest",
+        "ports": [
+          "2368/tcp"
+        ],
+        "volumes": ["/var/lib/ghost/content"]
+    }
+    
+]
