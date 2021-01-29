@@ -16,6 +16,9 @@ services:
     restart: unless-stopped
     depends_on:
       - nextcloud_db
+    networks:
+      - internal
+
   nextcloud_db:
     image: linuxserver/mariadb
     container_name: nextcloud_db
@@ -29,9 +32,17 @@ services:
       - MYSQL_PASSWORD=${DATABASE_PASSWORD}
     volumes:
       - mariadb:/config
+    ports:
+      - 3306:3306
     restart: unless-stopped
+    networks:
+      - internal
+
 volumes:
   mariadb:
   nc_data:
   nc_config:
 
+networks:
+  internal:
+    external: false
