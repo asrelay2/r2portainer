@@ -9,7 +9,8 @@ services:
       - PGID=${PGID}
       - TZ=${TZ}
     volumes:
-      - /portainer/Files/AppData/Config/Nextcloud/Config:/config
+      - nc_config:/config
+      - nc_data:/data
     ports:
       - ${PORT}:443
     restart: unless-stopped
@@ -27,6 +28,10 @@ services:
       - MYSQL_USER=nextcloud
       - MYSQL_PASSWORD=${DATABASE_PASSWORD}
     volumes:
-      - /portainer/Files/AppData/Config/Nextcloud/DB:/config
+      - mariadb:/config
     restart: unless-stopped
+volumes:
+  mariadb:
+  nc_data:
+  nc_config:
 
