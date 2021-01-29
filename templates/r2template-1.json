@@ -25,6 +25,53 @@
           "2368/tcp"
         ],
         "volumes": ["/var/lib/ghost/content"]
-    }
-    
+    },
+    {
+        "type": 3,
+        "title": "Nextcloud",
+        "name": "nextcloud",
+        "description": "Where are your photos and documents? With Nextcloud you pick a server of your choice, at home, in a data center or at a provider. And that is where your files will be. Nextcloud runs on that server, protecting your data and giving you access from your desktop or mobile devices.",
+        "logo": "https://raw.githubusercontent.com/asrelay2/r2portainer/main/assets/nextcloud.png",
+        "categories": [
+          "Cloud",
+          "Productivity",
+          "Tools",
+          "Other",
+          "Web"
+        ],
+        "note": "The database user is nextcloud and the database is nextcloud_db. The host of the database will be located at the bottom of the DB conotainer in portainer.",
+        "platform": "linux",
+        "repository": {
+          "url": "https://github.com/asrelay2/r2portainer",
+          "stackfile": "template/nextcloud.yml"
+        },
+        "env": [
+          {
+            "name": "PUID",
+            "label": "PUID",
+            "default": "1000"
+          },
+          {
+            "name": "PGID",
+            "label": "PGID",
+            "default": "100"
+          },
+          {
+            "name": "TZ",
+            "label": "TZ"
+          },
+          {
+            "name": "DATABASE_PASSWORD",
+            "label": "DATABASE_PASSWORD"
+          },
+          {
+            "name": "MYSQL_ROOT_PASSWORD",
+            "label": "MYSQL_ROOT_PASSWORD"
+          },
+          {
+            "name": "PORT",
+            "label": "PORT"
+          }
+        ]
+      }    
 ]
