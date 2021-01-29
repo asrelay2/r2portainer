@@ -8,7 +8,7 @@
 			],
 			"description": "Web File Browser which can be used as a middleware or standalone app.",
 			"image": "80x86/filebrowser:latest",
-			"logo": "https://raw.githubusercontent.com/Qballjos/portainer_templates/master/Images/filebrowser.png",
+			"logo": "https://raw.githubusercontent.com/asrelay2/r2portainer/main/assets/filebrowser.png",
 			"name": "filebrowser",
 			"note": "The default user and password is admin/admin.",
 			"platform": "linux",
