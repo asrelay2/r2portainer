@@ -13,6 +13,20 @@
         "volumes": [{"container": "/usr/local/apache2/htdocs/"}]
     },
     {
+      "type": 1,
+      "title": "2Pint Branch Cache Container",
+      "description": "2Pint Branch Cache Container for Linux",
+      "categories": ["cache"],
+      "platform": "linux",
+      "logo": "https://raw.githubusercontent.com/asrelay2/r2portainer/main/assets/2Pint.png",
+      "image": "asteinmetzler/peerdist:v1.0",
+      "ports": [
+        "80/tcp",
+        "8080/tcp"
+      ],
+      "volumes": [{"container": "/usr/local/apache2/htdocs/"}]
+  },
+  {
         "type": 1,
         "title": "Ghost",
         "description": "Free and open-source blogging platform",
